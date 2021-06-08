@@ -26,7 +26,7 @@ public class ElGamal {
         BigInteger k = new BigInteger( "-1" );
         BigInteger tempK;
         BigInteger result;
-        // looking for random key
+        // looking for random key within range of p
         for ( BigInteger i = BigInteger.valueOf(1); i.compareTo(p) < 0; i=i.add(BigInteger.ONE)){
             tempK = a.modPow(i,p);
             if(tempK.equals(C1)){
