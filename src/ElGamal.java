@@ -21,8 +21,6 @@ public class ElGamal {
    public static void encryptWithRandomNumber(BigInteger message, BigInteger y, BigInteger a,
                                               BigInteger p, BigInteger randomNumber) {
 
-
-
        C1 = a.modPow(randomNumber, p);
        C2 = message.multiply(y.modPow(randomNumber, p)).mod(p);
 
